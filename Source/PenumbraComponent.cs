@@ -105,11 +105,9 @@ namespace Penumbra
             base.Initialize();
             var deviceManager = (GraphicsDeviceManager)Game.Services.GetService<IGraphicsDeviceManager>();
             _content = new ResourceContentManager(Game.Services,
-#if DESKTOPGL
-                new ResourceManager("Penumbra.Resource.DesktopGL", typeof(PenumbraComponent).Assembly)
-#else
-                new ResourceManager("Penumbra.Resource.WindowsDX", typeof(PenumbraComponent).Assembly)
-#endif
+
+            new ResourceManager("PenumbraCore.Resource.DesktopGL", typeof(PenumbraComponent).Assembly)
+
             );
             _engine.Load(GraphicsDevice, deviceManager, Game.Window,
                 _content.Load<Effect>("PenumbraHull"),
