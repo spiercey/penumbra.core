@@ -1,3 +1,25 @@
+## What is this fork?
+
+This repo aims to provide a Dotnet Core version of the discosultan/penumbra project. 
+
+Why? Dotnet Core + Monogame OpenGL is a pretty sweet cross platform stack, this repo will allow you to use Penumbra without warnings about .net versions. 
+
+discosultan's OpenGL nuget package works perfectly with Core + Monogame but you will recieve build warnings. If you want nuet or to use DX continue to use the main repo. 
+
+## How to use this?
+
+Install the dotnet core 3.1 sdks and runtimes. 
+
+Source/PenumbraCore.csproj can now be built using `dotnet build`, generating a Penumbra-Core.dll that you can include in any Monogame + DotnetCore 3.1 project. 
+
+Simply generate the .dll, copy it to your game project and add it as a reference.
+
+## What's next?
+
+Maybe a nuget package or include releases here on github.
+
+## Original Documentation follows:
+
 ## What is this sorcery?
 
 Penumbra allows users to easily add 2D lighting with shadowing effects to their games.
